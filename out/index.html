@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Counter Website</title>
+  <script type ="module" src="script.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .counters {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    .counter {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .counter h2 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    select, input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="counters">
+    <div class="counter">
+      <h2>Cristi</h2>
+      <p id="cristi-counter">0</p>
+    </div>
+    <div class="counter">
+      <h2>Jan</h2>
+      <p id="jan-counter">0</p>
+    </div>
+    <div class="counter">
+      <h2>Michal</h2>
+      <p id="michal-counter">0</p>
+    </div>
+  </div>
+
+  <form id="input-form">
+    <select id="name" required>
+      <option value="" disabled selected>Select a name</option>
+      <option value="Cristi">Cristi</option>
+      <option value="Jan">Jan</option>
+      <option value="Michal">Michal</option>
+    </select>
+    <input type="number" id="value" step="0.01" placeholder="Enter value (e.g. 3.14)" required />
+    <button type="submit">Add</button>
+  </form>
+</body>
+</html>
